@@ -7,10 +7,11 @@ import time
 from PIL import Image
 import numpy as np
 
-DATA_ROOT = "madverse_data"
+from config import DATASET_ROOT
+
 ANNOT_FILES = [
-    "madverse_data/annotations/web_annot_j.json",
-    "madverse_data/annotations/adgal_annot_j.json",
+    f"{DATASET_ROOT}/annotations/web_annot_j.json",
+    f"{DATASET_ROOT}/annotations/adgal_annot_j.json",
 ]
 OUTPUT_CSV = "data/madverse_preprocessed_data.csv"
 FLUSH_EVERY = 20
@@ -43,7 +44,7 @@ for annot_file in ANNOT_FILES:
                 continue
 
             img_path = img_path.replace("\\", "/").replace("../", "")
-            full_path = os.path.normpath(os.path.join(DATA_ROOT, img_path))
+            full_path = os.path.normpath(os.path.join(DATASET_ROOT, img_path))
 
             if not os.path.exists(full_path) or full_path in processed:
                 continue
@@ -73,7 +74,7 @@ if not file_exists:
 start_time = time.time()
 print("Starting OCR...")
 
-for idx, item in enumerate(tqdm(items_to_process[:1]), 1):
+for idx, item in enumerate(tqdm(items_to_process), 1):
     try:
         # Load and resize image
         img = Image.open(item["path"])
