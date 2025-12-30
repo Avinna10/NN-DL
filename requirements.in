@@ -1,2 +1,6 @@
 easyocr
 tqdm
+transformers
+ipykernel
+scikit-learn
+pandas
