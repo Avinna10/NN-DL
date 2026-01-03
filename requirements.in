@@ -4,3 +4,4 @@ transformers
 ipykernel
 scikit-learn
 pandas
+matplotlib
