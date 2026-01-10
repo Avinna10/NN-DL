@@ -70,7 +70,9 @@ lazy-loader==0.4
 markupsafe==3.0.3
     # via jinja2
 matplotlib==3.10.8
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   seaborn
 matplotlib-inline==0.2.1
     # via
     #   ipykernel
@@ -96,6 +98,7 @@ numpy==2.2.6
     #   scikit-image
     #   scikit-learn
     #   scipy
+    #   seaborn
     #   shapely
     #   tifffile
     #   torchvision
@@ -150,7 +153,9 @@ packaging==25.0
     #   scikit-image
     #   transformers
 pandas==2.3.3
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   seaborn
 parso==0.8.5
     # via jedi
 pexpect==4.9.0
@@ -213,6 +218,8 @@ scipy==1.15.3
     #   easyocr
     #   scikit-image
     #   scikit-learn
+seaborn==0.13.2
+    # via -r requirements.in
 shapely==2.1.2
     # via easyocr
 six==1.17.0
