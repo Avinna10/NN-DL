@@ -218,6 +218,7 @@ label_encoder = checkpoint['label_encoder']
 Refer to `ad.ipynb` for complete preprocessing and inference examples. return predictions
 
 # Example usage
+```
 image_list = ["ad1.jpg", "ad2.jpg", "ad3.jpg"]
 slogan_list = ["Slogan 1", "Slogan 2", "Slogan 3"]
 results = batch_predict(image_list, slogan_list)
