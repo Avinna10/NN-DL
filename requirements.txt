@@ -73,6 +73,7 @@ matplotlib==3.10.8
     # via
     #   -r requirements.in
     #   seaborn
+    #   wordcloud
 matplotlib-inline==0.2.1
     # via
     #   ipykernel
@@ -103,6 +104,7 @@ numpy==2.2.6
     #   tifffile
     #   torchvision
     #   transformers
+    #   wordcloud
 nvidia-cublas-cu12==12.8.4.1
     # via
     #   nvidia-cudnn-cu12
@@ -167,6 +169,7 @@ pillow==12.0.0
     #   matplotlib
     #   scikit-image
     #   torchvision
+    #   wordcloud
 platformdirs==4.5.1
     # via jupyter-core
 prompt-toolkit==3.0.52
@@ -272,3 +275,5 @@ urllib3==2.6.2
     # via requests
 wcwidth==0.2.14
     # via prompt-toolkit
+wordcloud==1.9.6
+    # via -r requirements.in

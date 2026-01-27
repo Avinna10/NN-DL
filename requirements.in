@@ -6,3 +6,4 @@ scikit-learn
 pandas
 matplotlib
 seaborn
+wordcloud
