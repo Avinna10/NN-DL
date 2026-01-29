@@ -24,6 +24,9 @@ df[TEXT_COL] = df[TEXT_COL].fillna("").astype(str)
 
 # CHARACTER-LEVEL CLEANING
 def is_valid_word(word):
+    """
+    Check if a word is valid based on length, digit presence, and vowel ratio.
+    """
     if len(word) < 3:
         return False
 
@@ -35,6 +38,9 @@ def is_valid_word(word):
 
 
 def clean_ocr_text(text):
+    """
+    Clean OCR-extracted text by filtering valid alphabetic words.
+    """
     words = re.findall(r"[a-zA-Z]+", text)
     words = [w.lower() for w in words if is_valid_word(w)]
     return " ".join(words)
@@ -57,6 +63,9 @@ COMMON_WORDS = {w for w, c in freq.items() if c >= MIN_FREQ}
 
 
 def filter_common_words(text):
+    """
+    Filter text to keep only words that appear frequently in the corpus.
+    """
     return " ".join(w for w in text.split() if w in COMMON_WORDS)
 
 
